@@ -28,7 +28,7 @@
 
 	window.memeUploadAndShare = function memeUploadAndShare (dest, canvasEl, message) {
 		if (messageIsNewer(message)) {
-			var fd = getFormDataFromCanvas( cavnvasEl );
+			var fd = getFormDataFromCanvas( canvasEl );
 			postToBackend(fd)
 				.done(function(data, textStatus) {
 					console.log('yay, the image was saved to s3', JSON.parse(data).filename);
@@ -129,7 +129,9 @@
 		  description: description,
 		  caption: 'Send your mom a card.',
 		  link: imageUrl
-		}, function(response){});
+		}, function(response){
+			console.log(response);
+		});
 	}
 
 	function shareByEmail (url, message) {
