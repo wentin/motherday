@@ -1,0 +1,158 @@
+body {
+	font-family: 'Alex Brush', cursive;
+	margin: 0;
+	padding: 0;
+}
+.huffpost-wrapper input[type=text], .huffpost-wrapper textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid rgba(255,255,255,1);
+  color: #431f26;
+  text-align: center;
+  margin-top: -340px;
+  margin-left: 100px;
+  width: 700px;
+}
+ 
+.huffpost-wrapper input[type=text]:focus, .huffpost-wrapper textarea:focus {
+  box-shadow: 0 0 5px rgba(226, 188, 194, 1);
+  padding: 3px 0px 3px 3px;
+  border: 1px solid rgba(226, 188, 194, 1);
+}
+
+.huffpost-wrapper {
+	width: 900px;
+	height: 500px;
+      position: relative;
+      margin: 40px auto 40px auto;
+      -webkit-perspective: 800px;
+         -moz-perspective: 800px;
+           -o-perspective: 800px;
+              perspective: 800px;
+}
+.huffpost-wrapper a {
+	font-family: arial;
+	text-align: center;
+}
+.huffpost-card {
+      height: 100%;
+      width: 100%;
+	position: absolute;
+	-webkit-transition: -webkit-transform 1s;
+	 -moz-transition: -moz-transform 1s;
+	   -o-transition: -o-transform 1s;
+	      transition: transform 1s;
+	-webkit-transform-style: preserve-3d;
+	 -moz-transform-style: preserve-3d;
+	   -o-transform-style: preserve-3d;
+	      transform-style: preserve-3d;
+	-webkit-transform-origin: right center;
+	 -moz-transform-origin: right center;
+	   -o-transform-origin: right center;
+	      transform-origin: right center;
+}
+.huffpost-card>div {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+}
+.huffpost-card .front {
+	/*background: url(http://wentin.co/bg.png);*/
+	box-sizing: border-box;
+	transform-style: preserve-3d;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.huffpost-card .front img {
+}
+.huffpost-card .back {
+	text-align: center;
+	background-color: #e2bcc2;
+	-webkit-transform: rotateY( 180deg );
+	 -moz-transform: rotateY( 180deg );
+	   -o-transform: rotateY( 180deg );
+	      transform: rotateY( 180deg );
+}
+.huffpost-card .back .left {
+	width: 630px;
+	float: left;
+	border-right: solid 1px #fdf3ef;
+	height: 100%;
+	box-sizing: border-box;
+}
+.huffpost-card .back .left h1{
+	font-size: 36px;
+	color: #431f26;
+	margin: 35px 0;
+}
+.huffpost-card.flip {
+      -webkit-transform: translateX( -100% ) rotateY( -180deg );
+         -moz-transform: translateX( -100% ) rotateY( -180deg );
+           -o-transform: translateX( -100% ) rotateY( -180deg );
+              transform: translateX( -100% ) rotateY( -180deg );
+}
+.huffpost-mother {
+	font-size: 70px;
+	line-height: 80px;
+	font-family: 'Alex Brush', cursive;
+	background-color: rgba(255,255,255,0.4);
+	border: none;
+	width: 100%;
+	height: 250px;
+}
+.huffpost-card-share {
+	width: 200px;
+	height: 50px;
+	background: url(../i/share.png) no-repeat;
+	cursor: pointer;
+	margin: -80px auto;
+	position: relative;
+}
+.huffpost-wrapper .canvasWrapper {
+	margin-top: 0 auto;
+}
+.huffpost-wrapper canvas {
+	width: 562px;
+}
+.huffpost-card .back .right {
+	float: left;
+	width: 270px;
+	background: url(../i/stamp.png) no-repeat 20px 20px;
+	padding: 200px 0 0 76px;
+	box-sizing: border-box;
+}
+.huffpost-card .back .right a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	line-height: 43px;
+	text-indent: 30px;
+	margin-bottom: 20px;
+}
+.huffpost-wrapper .facebook {
+	width: 118px;
+	height: 43px;
+	background: url(../i/facebook.png) no-repeat;
+}
+.huffpost-wrapper .twiiter {
+	width: 118px;
+	height: 43px;
+	background: url(../i/twitter.png) no-repeat;
+}
+.huffpost-wrapper .googleplus {
+	width: 118px;
+	height: 43px;
+	background: url(../i/googleplus.png) no-repeat;
+}

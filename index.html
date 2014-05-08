@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Title</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />  
+<link href='http://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/shareModule.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script><!-- 
+<script type="text/javascript" src="js/sketch.js"></script> -->
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+<div class="huffpost-wrapper">
+	<div class="huffpost-card">
+		<div class="front">
+			<img src="https://s3.amazonaws.com/thrive-moms-card/bg.gif" crossOrigin="Anonymous">
+			<textarea name="" class="huffpost-mother" cols="30" rows="10"></textarea>
+			<div class="huffpost-card-share"></div>	
+		</div>
+		<div class="back">
+			<div class="left">
+				<h1>Drag your cursor on the card to sign</h1>
+				<div class="canvasWrapper"></div>
+			</div>	
+			<div class="right">
+
+				<a href="#" onclick="uploadAndShare ('facebook', $('.canvasWrapper canvas')[0], $('.huffpost-mother').val())" class="facebook">Share</a>	
+				<a href="#" class="twiiter">Share</a>	
+				<a href="#" class="googleplus">Share</a>				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
