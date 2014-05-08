@@ -125,6 +125,7 @@ body {
 }
 .huffpost-wrapper canvas {
 	width: 562px;
+	/*width: 900px;*/
 }
 .huffpost-card .back .right {
 	float: left;
