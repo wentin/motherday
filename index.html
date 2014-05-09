@@ -30,9 +30,9 @@
 			</div>	
 			<div class="right">
 
-				<a href="#" class="card-share-btn facebook" data-service="facebook">Share</a>	
-				<a href="#" class="card-share-btn twiiter" data-service="twitter">Share</a>	
-				<a href="#" class="card-share-btn googleplus" data-service="googleplus">Share</a>				
+				<a href="#" class="card-share-btn email" data-service="email">Send</a>
+				<a href="#" class="card-share-btn facebook" data-service="facebook">Send</a>
+				<a href="#" class="card-share-btn twiiter" data-service="twitter">Send</a>
 			</div>
 		</div>
 	</div>
@@ -42,11 +42,13 @@
 		$(document).ready(function() {
 			$('.card-share-btn').on('click', function(e) {
 				e.preventDefault();
-				memeUploadAndShare( $(this).data('service'), $('.canvasWrapper canvas')[0], $('.huffpost-mother').val());
+				uploadAndShare( $(this).data('service'), $('.canvasWrapper canvas')[0], $('.huffpost-mother').val());
 			});
 		});
 	})(jQuery);
 </script>
+
+<iframe id="card-email-helper" src="about:blank" style="display:none;"></iframe>
 
 </body>
 </html>

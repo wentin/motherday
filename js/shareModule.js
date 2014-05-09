@@ -2,7 +2,7 @@
 
 	window.fbAsyncInit = function() {
     FB.init({
-      appId      : '460242587411701',
+      appId      : '1389422801344145',
       xfbml      : true,
       version    : 'v2.0'
     });
@@ -128,18 +128,21 @@
 		  picture: imageUrl,
 		  description: description,
 		  caption: 'Send your mom a card.',
-		  link: imageUrl
+		  link: "http://www.huffingtonpost.com"
 		}, function(response){
 			console.log(response);
 		});
 	}
 
 	function shareByEmail (url, message) {
-		var baseMailto = 'mailto:?body='
-		var message = encodeURIComponent(message + "\n");
-		var url = encodeURIComponent(url);
-		mailtoURL = baseMailto + message + url;
-		window.open(mailtoURL);
+		var emailIframe = $('#card-email-helper')[0];
+
+		var entryUrl = "http://m.huffpost.com/us/entry/12345";
+		var subject = encodeURIComponent("Happy Mother's Day");
+		var body = encodeURIComponent(message + "\n\n" + url + "\n\n" + entryUrl);
+		var mailtoURL = 'mailto:?' + 'subject=' + subject + '&body=' + body;
+		emailIframe.contentWindow.location = 'about:blank';
+		emailIframe.contentWindow.location = mailtoURL;
 	}
 
 })(window, $);
