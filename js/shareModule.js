@@ -139,7 +139,7 @@
 
 		var entryUrl = "http://m.huffpost.com/us/entry/12345";
 		var subject = encodeURIComponent("Happy Mother's Day");
-		var body = encodeURIComponent(message + "\n\n" + url + "\n\n" + entryUrl);
+		var body = encodeURIComponent(message + "\n\nSomebody who loves you made a card for you here:\n\n" + url + "\n\nMake your own at " + entryUrl);
 		var mailtoURL = 'mailto:?' + 'subject=' + subject + '&body=' + body;
 		emailIframe.contentWindow.location = 'about:blank';
 		emailIframe.contentWindow.location = mailtoURL;
