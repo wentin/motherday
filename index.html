@@ -30,12 +30,25 @@
 			</div>	
 			<div class="right">
 
-				<a href="#" onclick="uploadAndShare ('facebook', $('.canvasWrapper canvas')[0], $('.huffpost-mother').val())" class="facebook">Share</a>	
-				<a href="#" class="twiiter">Share</a>	
-				<a href="#" class="googleplus">Share</a>				
+				<a href="#" class="card-share-btn email" data-service="email">Send</a>
+				<a href="#" class="card-share-btn facebook" data-service="facebook">Send</a>
+				<a href="#" class="card-share-btn twiiter" data-service="twitter">Send</a>
 			</div>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function() {
+			$('.card-share-btn').on('click', function(e) {
+				e.preventDefault();
+				uploadAndShare( $(this).data('service'), $('.canvasWrapper canvas')[0], $('.huffpost-mother').val());
+			});
+		});
+	})(jQuery);
+</script>
+
+<iframe id="card-email-helper" src="about:blank" style="display:none;"></iframe>
+
 </body>
 </html>
